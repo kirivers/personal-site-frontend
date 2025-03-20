@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx serve -s build",
-    "build": "react-scripts build"
+    "start": "node server.js",
+    "build": "rsbuild build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
