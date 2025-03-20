@@ -24,7 +24,7 @@ const Home = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('personal-site-backend-production.up.railway.app')
+    fetch('personal-site-backend-production.up.railway.app/api/projects')
       .then(response => response.json())
       .then(data => setProjects(data))
       .catch(error => console.error('Error fetching projects:', error));
