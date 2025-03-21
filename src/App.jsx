@@ -2,8 +2,8 @@ import './css/App.css';
 import './css/Profile.css';
 import './css/Project.css';
 import Bio from './components/Bio'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const skillColors = {
   Python: "#3572A5",
@@ -35,10 +35,10 @@ const App = () => {
           <ul className="social-container">
             <li>
               <a href="https://www.linkedin.com/in/kaylen-rivers/" target="_blank" rel="noopener noreferrer" className="linkedin-icon">
-                <FontAwesomeIcon icon={faLinkedin} />
+                {/*<FontAwesomeIcon icon={faLinkedin} />*/}
               </a>
               <a href="https://github.com/kirivers" target="_blank" rel="noopener noreferrer" className="github-icon-top">
-                <FontAwesomeIcon icon={faGithub} />
+                {/*<FontAwesomeIcon icon={faGithub} />*/}
               </a>
             </li>
           </ul>
@@ -75,7 +75,7 @@ const App = () => {
               {/* GitHub icon (only if project has a GitHub link) */}
               {project.githubLink && (
                 <div className="github-icon">
-                  <FontAwesomeIcon icon={faGithub} />
+                  {/*<FontAwesomeIcon icon={faGithub} />*/}
                 </div>
               )}
               
