@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-
 import './css/App.css';
 import './css/Profile.css';
 import './css/Project.css';
 import Bio from './components/Bio'
-import ContactForm from './components/ContactForm'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -18,25 +15,18 @@ const skillColors = {
   React: "#66A832"
 };
 
-const Home = () => {
+const projects = [
+  { id: 1, name: 'Iris Recognition', path: '/projects/project1', skills:['Python', 'Statistics'], description:'Implementing Personal Identification Based on Iris Texture Analysis (2003)', githubLink: 'https://github.com/kirivers/IrisRecognition' },
+  { id: 2, name: 'Stop Sign Detection', path: '/projects/project2', skills:['Python'], description:' Detecting the stop sign in an image using k-means algorithm', githubLink: 'https://github.com/kirivers/StopSignDetection'  },
+  { id: 3, name: 'Face Recognition', path: '/projects/project3', skills:['Python', 'scikit'], description:'Performing image segmentation and facial recognition using knn ', githubLink: 'https://github.com/kirivers/FaceRecognition'  },
+  { id: 4, name: 'SVHN CNN', path: '/projects/project4', skills:['Python', 'scikit', 'Torch'], description:'Parsing MATLAB\'s SVHN with a CNN built via PyTorch', githubLink: 'https://github.com/kirivers/SVHNCNN'  },
+  { id: 5, name: 'GPT Model', path: '/projects/project5', skills:['Python', 'Torch' ], description:'Implementing a GPT style model for text generation using PyTorch at the character level', githubLink: 'https://github.com/kirivers/GPT-by-Character'  },
+  { id: 6, name: 'This website', path: '/projects/project6', skills:['JavaScript', 'Node.js', 'React'], description:'My personal site.', githubLink: 'https://github.com/kirivers/personal-site'  }
+];
 
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const myprojects = [
-      { id: 1, name: 'Iris Recognition', path: '/projects/project1', skills:['Python', 'Statistics'], description:'Implementing Personal Identification Based on Iris Texture Analysis (2003)', githubLink: 'https://github.com/kirivers/IrisRecognition' },
-      { id: 2, name: 'Stop Sign Detection', path: '/projects/project2', skills:['Python'], description:' Detecting the stop sign in an image using k-means algorithm', githubLink: 'https://github.com/kirivers/StopSignDetection'  },
-      { id: 3, name: 'Face Recognition', path: '/projects/project3', skills:['Python', 'scikit'], description:'Performing image segmentation and facial recognition using knn ', githubLink: 'https://github.com/kirivers/FaceRecognition'  },
-      { id: 4, name: 'SVHN CNN', path: '/projects/project4', skills:['Python', 'scikit', 'Torch'], description:'Parsing MATLAB\'s SVHN with a CNN built via PyTorch', githubLink: 'https://github.com/kirivers/SVHNCNN'  },
-      { id: 5, name: 'GPT Model', path: '/projects/project5', skills:['Python', 'Torch' ], description:'Implementing a GPT style model for text generation using PyTorch at the character level', githubLink: 'https://github.com/kirivers/GPT-by-Character'  },
-      { id: 6, name: 'This website', path: '/projects/project6', skills:['JavaScript', 'Node.js', 'React'], description:'My personal site.', githubLink: 'https://github.com/kirivers/personal-site'  }
-    ];
-
-    setProjects(myprojects);
-  }, []);
-
+const App = () => {
   return (
-    <div className='App'>
+    <div className="App">
       {/* Main Page */}
       <main>
         
@@ -101,4 +91,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;
